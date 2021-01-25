@@ -1,79 +1,38 @@
-# WorkAdventure Map Starter Kit
+# FOSSGIS-WorkAdventure-Maps
 
-This is a starter kit to help you build your own map for [WorkAdventure](https://workadventu.re).
+This repo contains some maps built with the [Tiled Map Editor](https://www.mapeditor.org/) which might be used at some [FOSSGIS](https://fossgis.de/) events in a [WorkAdventure](https://workadventu.re/)-based world. See the ["Create your map!" howto](https://workadventu.re/create-map.html) about how to build maps.
 
-## Tools you will need
+## Maps
 
-In order to build your own map for WorkAdventure, you need:
+- [FOSSGIS-Update](fossgis-update.json) - Map which might be used at the upcoming [FOSSGIS-UPDATE event](https://fossgis.de/news/2020_12_04_fossgis-update/).
 
-- the [Tiled editor](https://www.mapeditor.org/) software
-- "tiles" (i.e. images) to create your map (this starter kit provides a good default tileset for offices)
-- a web-server to serve your map (this starter kit proposes to use Github static pages as a web-server which is both free and performant)
+## Used Tilesets
 
-## Getting started
+Please note that the tilesets are included as [Git submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules), so you will have to `git submodule update --init --recursive` them before they are available.
 
-On the [Github repository page](https://github.com/thecodingmachine/workadventure-map-starter-kit),
-click the **"Use this template"** button. You will be prompted to enter a repository name for your map.
+* [rC3-OSM-Tileset](https://github.com/mstock/rC3-OSM-Tileset): Tileset based on the [OpenStreetMap Carto](https://github.com/gravitystorm/openstreetmap-carto) map style.
+* [world-tiles](https://git.cccv.de/rc3/world-tiles): Shared tilesets for the [rC3 world](https://rc3.world) that was built for the [rC3 (Remote Chaos Experience) conference](https://events.ccc.de/2020/09/04/rc3-remote-chaos-experience/). Please note that these tilesets may be provided under a different license than the remainder of this repository.
 
-![](docs/create_repo.png)
+## Contained Tilesets
 
-Be sure to keep the repository "Public".
+### FOSSGIS-UPDATE Logos
 
-In your newly created repository, click on the **Settings tab** and scroll down to the **GitHub Pages** section.
-Then select the **gh-pages** branch. 
+![FOSSGIS-UPDATE Logos](tilesets/fossgis-update/logos.png)
 
-![](docs/github_pages.png)
+`tilesets/fossgis-update/logos.png`: Logos for the FOSSGIS-UPDATE event map.
 
-Wait a few minutes a Github will deploy a new website with the content of the repository.
-The address of the website is visible in the "GitHub Pages" section.
+### FOSSGIS-UPDATE Labels
 
-![](docs/website_address.png)
+![FOSSGIS-UPDATE Labels](tilesets/fossgis-update/labels.png)
 
-Click on the link. You should be redirected directly to WorkAdventure, on your map!
+`tilesets/fossgis-update/labels.png`: Labels for the FOSSGIS-UPDATE event map.
 
-## Customizing your map
+## License
 
-Your map is now up and online. You need to customize it.
+[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/)
 
-### Cloning the map
+### Logos
 
-Start by cloning the map. If you are used to Git and GitHub, simply clone the map
-to your computer using your preferred tool and [jump to the next chapter](#loading-the-map-in-tiled).
-
-If you are new to Git, cloning the map means downloading the map to your computer.
-To do this, you will need Git, or a Git compatible tool. Our advice is to use
-[GitHub Desktop](https://desktop.github.com/).
-
-TODO: test and continue
-
-### Loading the map in Tiled
-
-The sample map is in the file `map.json`.
-You can load this file in [Tiled](https://www.mapeditor.org/).
-
-Now, it's up to you to edit the map and write your own map.
-
-Some resources regarding Tiled:
-
-- [Tiled documentation](https://doc.mapeditor.org/en/stable/manual/introduction/)
-- [Tiled video tutorials](https://www.gamefromscratch.com/post/2015/10/14/Tiled-Map-Editor-Tutorial-Series.aspx)
-
-### About WorkAdventu.re maps
-
-In order to design a map that will be readable by WorkAdventure, you will have to respect some constraints.
-
-In particular, you will need to:
-
-- set a start position for the players
-- configure the "floor layer" (so that WorkAdventure can correctly display characters above the floor, but under the ceiling)
-- eventually, you can place exits that link to other maps
-
-All this is described in the [WorkAdventure documentation](https://github.com/thecodingmachine/workadventure/#designing-a-map).
-Please be sure to check it out. 
-
-### Pushing the map
-
-When your changes are ready, you need to "commit" and "push" the changes back to GitHub.
-Just wait a few minutes, and your map will be propagated automatically to the GitHub pages web-server.
-
-TODO: describe how to push
+* [FOSSGIS logo](https://commons.wikimedia.org/wiki/File:FOSSGIS_Logo.png): FOSSGIS e.V., [Creative Commons Attribution-Share Alike 3.0 Germany](https://creativecommons.org/licenses/by-sa/3.0/de/deed.en)
+* [OpenStreetMap logo](https://wiki.openstreetmap.org/wiki/File:Public-images-osm_logo.svg): Ken Vermette, [Creative Commons Attribution-ShareAlike 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+* [uMap logo](https://wiki.openstreetmap.org/wiki/File:Umap_logo.svg): [Ybon](https://wiki.openstreetmap.org/wiki/User:Ybon), [Creative Commons Attribution-ShareAlike 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
